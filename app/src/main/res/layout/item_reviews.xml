@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+        <ImageView
+                android:id="@+id/reviewerImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/start_filled"/>
+
+        <TextView
+                android:id="@+id/reviewerName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/reviewerImage"
+                app:layout_constraintStart_toEndOf="@id/reviewerImage"
+                app:layout_constraintBottom_toBottomOf="@id/reviewerImage"
+                app:layout_constraintEnd_toStartOf="@id/reviewStarRating"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:layout_marginStart="8dp"
+                tools:text="Samantha Rodriguez"
+                android:textSize="16sp"
+                android:typeface="serif"
+                android:textColor="@color/colorPrimaryDark"/>
+
+        <com.hardeepsingh.yelpify.customlayouts.StarRatingView
+                android:id="@+id/reviewStarRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+                android:id="@+id/reviewDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/reviewerName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="4dp"
+                android:maxLines="3"
+                android:ellipsize="end"
+                tools:text="54678 East Street, Los Angles CA 93456"
+                android:textSize="14sp"
+                android:typeface="serif"
+                android:textColor="@android:color/darker_gray"/>
+
+        <TextView
+                android:id="@+id/reviewDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/reviewDescription"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Jan 13, 2019"
+                android:layout_margin="4dp"
+                android:textSize="14sp"
+                android:typeface="serif"
+                android:textColor="@android:color/darker_gray"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

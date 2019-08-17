@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Yelpify</string>
+    <string name="website">Website</string>
+    <string name="hours_of_operation">Hours of Operation</string>
+    <string name="reviews">Reviews</string>
+</resources>
