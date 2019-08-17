@@ -2,10 +2,10 @@ package com.hardeepsingh.yelpify.viewholder
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.hardeepsingh.yelpify.activities.createDetailIntent
 import com.hardeepsingh.yelpify.extensions.generateAddress
 import com.hardeepsingh.yelpify.extensions.generateCategory
 import com.hardeepsingh.yelpify.model.Business
+import com.hardeepsingh.yelpify.util.createDetailActivityIntent
 import kotlinx.android.synthetic.main.item_businesses.view.*
 
 private const val REVIEWS = "Reviews"
@@ -25,6 +25,6 @@ class BusinessesViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         reviewsCount.text = "${business.review_count} $REVIEWS"
         address.text = business.generateAddress()
         phoneNumber.text = business.display_phone
-        view.setOnClickListener { context.startActivity(createDetailIntent(context, business.id)) }
+        view.setOnClickListener { context.startActivity(createDetailActivityIntent(context, business.id)) }
     }
 }

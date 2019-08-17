@@ -1,6 +1,5 @@
 package com.hardeepsingh.yelpify.activities
 
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -16,20 +15,13 @@ import com.hardeepsingh.yelpify.extensions.generateCategory
 import com.hardeepsingh.yelpify.model.BusinessDetail
 import com.hardeepsingh.yelpify.model.BusinessReviews
 import com.hardeepsingh.yelpify.provideComponent
+import com.hardeepsingh.yelpify.util.BUSINESS_ID
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.functions.BiFunction
 import kotlinx.android.synthetic.main.activity_details.*
 import javax.inject.Inject
-
-private const val BUSINESS_ID = "Business-ID"
-
-fun createDetailIntent(context: Context, id: String) =
-    Intent(context, DetailsActivity::class.java)
-        .apply {
-            putExtra(BUSINESS_ID, id)
-        }
 
 class DetailsActivity : AppCompatActivity() {
 

@@ -1,10 +1,10 @@
 package com.hardeepsingh.yelpify.activities
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.hardeepsingh.yelpify.R
 import com.hardeepsingh.yelpify.adapter.BusinessesAdapter
